@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="store">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular Bookstore</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Angular Bookstore</h1>
+      <h2>Test Ionic Framework Bookstore</h2>
+    </header>
+    <article ng-controller="StoreController as store">
+      <h2>{{store.product.name}}</h1>
+      <h3>${{store.product.price}}</h2>
+      <p>{{store.product.description}}</p>
+    </article>
+    <footer>
+      <p>Made by Yesid Ghisays</p>
+      <p>@yeso126</p>
+    </footer>
+  </body>
+</html>

@@ -12,11 +12,15 @@
       <h2>Test Ionic Framework Bookstore</h2>
     </header>
     <section ng-controller="StoreController as store">
+      <h1>Available books</h1>
       <article ng-repeat="product in store.products">
         <h2>{{product.name}}</h1>
-        <h3>${{product.price}}</h2>
-        <p>{{product.description}}</p>
+        <h3>{{product.price | currency}}</h2>
+        <img ng-src="{{product.images[0].thumb}}">
+        
+        <p>{{product.description | limitTo:150}}...</p>
         <button ng-show="product.canPurchase">Add to cart</button>
+        <button ng-show="!product.canPurchase">Not available</button>
       </article>
     </section>
     <footer>
